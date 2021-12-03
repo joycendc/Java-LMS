@@ -355,7 +355,7 @@ public class AddBook extends javax.swing.JFrame {
             addbutt = false;
         }else if(db.insertBook(book)){
             this.dispose();
-            JOptionPane.showMessageDialog(null, "Inserted !", "Success",2);
+            JOptionPane.showMessageDialog(null, "Book Inserted !", "Success",2);
         }
     }//GEN-LAST:event_addActionPerformed
 
@@ -375,7 +375,7 @@ public class AddBook extends javax.swing.JFrame {
             addbutt = false;
         }else if(db.updateBook(book)){
             this.dispose();
-            JOptionPane.showMessageDialog(null, "Updated !", "Success",2);
+            JOptionPane.showMessageDialog(null, "Book Updated !", "Success",2);
         }
     }//GEN-LAST:event_updActionPerformed
 
@@ -383,6 +383,7 @@ public class AddBook extends javax.swing.JFrame {
         int log = JOptionPane.showConfirmDialog(null,"Are you sure to delete " + title.getText() + " ?","Delete",0,2);
         if(log==0){  
             db.deleteBook(isbn.getText()); 
+            JOptionPane.showMessageDialog(null, "Book Deleted !", "Success",2);
             this.dispose();
         }
           

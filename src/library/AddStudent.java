@@ -360,7 +360,7 @@ public class AddStudent extends javax.swing.JFrame {
             addbutt = false;
         }else if(db.insertStudent(student)){
             this.dispose();
-            JOptionPane.showMessageDialog(null, "Inserted !", "Success",2);
+            JOptionPane.showMessageDialog(null, "Student Added !", "Success",2);
         }
     }//GEN-LAST:event_addActionPerformed
 
@@ -394,7 +394,7 @@ public class AddStudent extends javax.swing.JFrame {
             addbutt = false;
         }else if(db.updateStudent(student)){
             this.dispose();
-            JOptionPane.showMessageDialog(null, "Updated !", "Success",2);
+            JOptionPane.showMessageDialog(null, "Student Updated !", "Success",2);
         }
     }//GEN-LAST:event_updActionPerformed
 
@@ -402,7 +402,7 @@ public class AddStudent extends javax.swing.JFrame {
         int log = JOptionPane.showConfirmDialog(null,"Are you sure to delete " + fname.getText() +" "+ lname.getText() + " ?","Delete",0,2);
         if(log==0){
             db.deleteStudent(studentid.getText()); 
-            JOptionPane.showMessageDialog(null, "Deleted !", "Success",2);
+            JOptionPane.showMessageDialog(null, "Student Deleted !", "Success",2);
             this.dispose();
         }
 

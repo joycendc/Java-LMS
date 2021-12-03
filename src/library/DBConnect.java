@@ -412,8 +412,8 @@ public class DBConnect {
            
             try{
                 ps = (PreparedStatement) openConnection().prepareStatement(query);
-                ps.setInt(1, Integer.parseInt(studentid));
-                ps.setInt(2, Integer.parseInt(isbn));
+                ps.setString(1, studentid);
+                ps.setString(2, isbn);
               
                 ps.executeUpdate();
 
@@ -582,8 +582,7 @@ public class DBConnect {
             ps = (PreparedStatement) openConnection().prepareStatement(query);
             ps.setString(1, isbn);
             ps.executeUpdate();
-            
-            JOptionPane.showMessageDialog(null, "Deleted !", "Success",2);
+          
 
         }catch(SQLException ex){
                 Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
@@ -620,7 +619,7 @@ public class DBConnect {
             ps.setString(1, cat);     
             ps.executeUpdate();
             
-            JOptionPane.showMessageDialog(null, "Added !", "Success",2);
+            JOptionPane.showMessageDialog(null, "Category Added !", "Success",2);
         }catch(SQLException ex){
                 Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }   
@@ -635,7 +634,7 @@ public class DBConnect {
             ps.setString(1, cat);
             ps.executeUpdate();
             
-            JOptionPane.showMessageDialog(null, "Deleted !", "Success",2);
+            JOptionPane.showMessageDialog(null, "Category Deleted !", "Success",2);
 
         }catch(SQLException ex){
             JOptionPane.showMessageDialog(null, ex, "Engkkk",2);
